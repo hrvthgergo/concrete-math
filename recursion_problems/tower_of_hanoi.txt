@@ -1,0 +1,24 @@
+wiki: https://en.wikipedia.org/wiki/Tower_of_Hanoi
+
+# Labels: lifo, stack, linked list, queue
+
+recursion:
+----------
+	1) for small numbers,
+	2) find a correct mathematical expression (e.g. in recursive form),
+	3) find a closed formula.
+
+tower of hanoi:
+---------------
+	0) find the right notation -> let t[n] the minimal number of steps must be taken to complete the task.
+	1) num of disks		T[n]
+	   n=0 			0 step
+	   n=1			1 step
+	   n=2			3 steps
+	   n=3			7 steps
+	   n=4			15 steps
+	   ...
+	
+	   -> T[0] = 0,
+	      T[n] = T[n-1] + 1, if n > 0.
+	2) T[n] = 2^n - 1
