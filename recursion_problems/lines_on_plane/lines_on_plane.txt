@@ -1,0 +1,26 @@
+# Labels: ???
+
+find the maximal number of areas created by n straight line.
+
+recursion:
+----------
+	1) for small numbers,
+	2) find a correct mathematical expression (e.g. in recursive form),
+	3) find a closed formula.
+
+lines on plane:
+---------------
+	0) L[n] -> maximal number of areas created by n straight line
+	1) L[0] -> 1
+	   L[1] -> 2
+	   L[2] -> 4
+	   L[3] -> 7
+	   L[4] -> 11
+	2) L[0] = 1, and
+	   L[n] = L[n-1] + n
+	3) L[n] = 1/2(n(n + 1)) + 1
+	   hint S[n] = 1 + 2 + 3 + ... + n -> idea from Gauss to list S[n] for twice but in different order and add the two list:
+		1 + 2 + 3 + ... + (n-1) + n
+		n + (n-1) + (n-2) + ... + 2 + 1
+		-------------------------------
+		(n+1) + ... + (n+1) -> n(n+1)
